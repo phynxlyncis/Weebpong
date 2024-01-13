@@ -7,7 +7,7 @@
 radius = 39.0128
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8njj1"]
-radius = 15.0
+radius = 2.0
 
 [node name="Ball" type="CharacterBody2D"]
 script = ExtResource("1_788if")
@@ -16,6 +16,7 @@ script = ExtResource("1_788if")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collide"]
 shape = SubResource("CircleShape2D_jo0o4")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
 [node name="koneko" type="Sprite2D" parent="."]
 position = Vector2(-2.5, 1)
