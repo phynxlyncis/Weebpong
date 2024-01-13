@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cc5evd1mfck2q"]
+
+[ext_resource type="Texture2D" uid="uid://bgh55llo6vtg8" path="res://db7e4b9-f747cb69-1165-4159-b9cf-dcd9feaac7da.png" id="1_104ih"]
+[ext_resource type="Script" path="res://ball/ball.gd" id="1_788if"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jo0o4"]
+radius = 39.0128
+
+[node name="Ball" type="CharacterBody2D"]
+script = ExtResource("1_788if")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jo0o4")
+
+[node name="koneko" type="Sprite2D" parent="."]
+position = Vector2(-2.5, 1)
+scale = Vector2(0.0401042, 0.0574074)
+texture = ExtResource("1_104ih")

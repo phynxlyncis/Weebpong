@@ -1,3 +1,31 @@
-[gd_scene format=3 uid="uid://cjs6lx6fofwk8"]
+[gd_scene load_steps=5 format=3 uid="uid://cjs6lx6fofwk8"]
+
+[ext_resource type="PackedScene" uid="uid://pfpyfmwkdq83" path="res://player/player.tscn" id="1_e1qw2"]
+[ext_resource type="PackedScene" uid="uid://cc5evd1mfck2q" path="res://ball/ball.tscn" id="2_tessc"]
+[ext_resource type="PackedScene" uid="uid://0fw8w0na1l0c" path="res://player/player2.tscn" id="3_juuyp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4eqjr"]
+size = Vector2(1152, 20)
 
 [node name="PongGame" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_e1qw2")]
+position = Vector2(67, 294)
+
+[node name="Wall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2(576, 10)
+shape = SubResource("RectangleShape2D_4eqjr")
+
+[node name="Wall2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2"]
+position = Vector2(576, 637)
+shape = SubResource("RectangleShape2D_4eqjr")
+
+[node name="Ball" parent="." instance=ExtResource("2_tessc")]
+position = Vector2(580, 273)
+
+[node name="Player2" parent="." instance=ExtResource("3_juuyp")]
+position = Vector2(1064, 295)
